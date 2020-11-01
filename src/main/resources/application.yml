@@ -1,0 +1,29 @@
+#Environment independent values
+server:
+  port: 8018
+spring:
+  profiles:
+    active: local
+  datasource:
+    driver-class-name: org.postgresql.Driver
+
+#Local
+---
+spring:
+  flyway:
+    check-location: false
+  profiles: local
+  datasource:
+    url: jdbc:postgresql://localhost:5433/iliad
+    username: developer
+    password: testing
+
+#Staging
+---
+spring:
+  profiles: staging
+
+#Prod
+---
+spring:
+  profiles: production
