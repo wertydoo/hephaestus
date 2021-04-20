@@ -10,3 +10,8 @@ services:
       POSTGRES_DB: 'iliad'
       POSTGRES_USER: 'developer'
       POSTGRES_PASSWORD: 'testing'
+    networks:
+      - defnet
+networks:
+    defnet:
+      external: true
